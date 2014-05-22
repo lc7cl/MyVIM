@@ -90,7 +90,7 @@ set mouse=a
 set incsearch
 set number
 "filetype on
-set foldenable 
+"set foldenable 
 "set autochdir
 set foldmethod=syntax
 
