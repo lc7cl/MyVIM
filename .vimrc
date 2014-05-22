@@ -92,7 +92,7 @@ set number
 "filetype on
 "set foldenable 
 "set autochdir
-set foldmethod=syntax
+"set foldmethod=syntax
 
 let Tlist_Auto_Open=1
 let Tlist_Exit_OnlyWindow=1
