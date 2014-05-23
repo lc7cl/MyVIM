@@ -94,8 +94,10 @@ set foldenable
 "set autochdir
 set foldmethod=syntax
 
-let Tlist_Auto_open=1
+let Tlist_Auto_Open=1
 let Tlist_Exit_OnlyWindow=1
+let Tlist_Use_Right_Window = 1 
+let Tlist_Show_One_File = 1   
 
 if has("cscope")
 	set cscopetag
