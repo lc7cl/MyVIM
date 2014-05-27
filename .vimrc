@@ -53,8 +53,8 @@ map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&  b:NERDTreeType == "primary") | q | endif
 
 "neocomplache config
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_force_overwrite_completefunc = 1
+"let g:neocomplcache_enable_at_startup = 1
+"let g:neocomplcache_force_overwrite_completefunc = 1
 
 "other config
 set nu
