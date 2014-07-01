@@ -15,7 +15,7 @@ Bundle 'gmarik/vundle'
 Bundle 'taglist.vim'
 Bundle 'OmniCppComplete'
 Bundle 'winmanager'
-Bundle 'bufexplorer.zp'
+"Bundle 'bufexplorer.zp'
 Bundle 'minibufexpl.vim'
 Bundle 'The-NERD-tree'
 Bundle 'tpope/vim-fugitive'
@@ -66,7 +66,7 @@ map Y "+y
 map P "+p  ""
 
 "easymotion
-let g:EasyMotion_leader_key = '<Leader>'
+"let g:EasyMotion_leader_key = '<Leader>'
 
 "powerline config
 set laststatus=2
@@ -76,6 +76,7 @@ set fillchars+=stl:\ ,stlnc:\
 
 syntax on
 
+colorscheme delek
 set ruler
 set showcmd	
 set cmdheight=1
@@ -115,4 +116,7 @@ if has("cscope")
 endif
 if has("tags")
 	set tags=tags
+endif
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
