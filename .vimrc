@@ -90,6 +90,7 @@ set showmatch
 set mouse=a
 set incsearch
 set number
+set tw=80
 "filetype on
 set foldenable 
 "set autochdir
