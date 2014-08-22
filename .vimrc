@@ -152,7 +152,7 @@ function AddTitle()
     call append(23,"*")
     call append(24,"* Last modified: ".strftime("%Y-%m-%d %H:%M"))
     call append(25,"*")
-    call append(26,"* Filename: ".expand("%:t"))
+    call append(26,"* Filename: ".expand("%"))
     call append(27,"*")
     call append(28,"* Description: ")
     call append(29,"*")
@@ -174,9 +174,9 @@ endfunction
 "如果没有的话，代表没有添加过作者信息，需要新添加；
 "如果有的话，那么只需要更新即可
 function TitleDet()
-    let n=1
+    let n=20
     "默认为添加
-    while n < 10
+    while n < 30
         let line = getline(n)
         if line =~ '^\#\s*\S*Last\smodified:\S*.*$'
             call UpdateTitle()
