@@ -178,7 +178,7 @@ function TitleDet()
     "默认为添加
     while n < 30
         let line = getline(n)
-        if line =~ '^\#\s*\S*Last\smodified:\S*.*$'
+        if line =~ '^\*\s*\S*Last\smodified:\S*.*$'
             call UpdateTitle()
             return
         endif
