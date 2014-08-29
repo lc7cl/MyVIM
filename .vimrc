@@ -19,7 +19,7 @@ Bundle 'winmanager'
 Bundle 'minibufexpl.vim'
 Bundle 'The-NERD-tree'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree'
