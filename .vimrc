@@ -59,7 +59,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&  b:NERDTre
 "other config
 set nu
 set mouse=a
-set tabstop=2
+set tabstop=4
+set expandtab
 let mapleader = ","  
 let g:mapleader = ","  
 map Y "+y  
