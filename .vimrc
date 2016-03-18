@@ -191,3 +191,6 @@ endfunction
 normal m'
 normal ''
 
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
