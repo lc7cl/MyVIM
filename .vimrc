@@ -35,6 +35,7 @@ Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
+Bundle 'git://github.com/fatih/vim-go.git'
  
 filetype plugin indent on     " required!
 "
