@@ -42,7 +42,6 @@ Bundle 'git://github.com/fatih/vim-go.git'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'nvie/vim-flake8'
-Bundle 'vim-scripts/TaskList.vim'
 Plugin 'majutsushi/tagbar'
  
 filetype plugin indent on     " required!
