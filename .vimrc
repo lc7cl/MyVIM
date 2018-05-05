@@ -19,7 +19,8 @@ Bundle 'winmanager'
 Bundle 'minibufexpl.vim'
 Bundle 'The-NERD-tree'
 Bundle 'tpope/vim-fugitive'
-"Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'vim-scripts/matchit.zip'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/nerdtree'
@@ -29,6 +30,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'Townk/vim-autoclose'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'godlygeek/tabular'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -39,8 +41,9 @@ Bundle 'git://github.com/fatih/vim-go.git'
 " Bundle 'Valloric/YouCompleteMe'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
+Bundle 'vim-scripts/TaskList.vim'
+Plugin 'majutsushi/tagbar'
  
 filetype plugin indent on     " required!
 "
@@ -130,6 +133,69 @@ endif
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+Bundle 'kien/rainbow_parentheses.vim'
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+let g:rbpt_max = 40
+let g:rbpt_loadcmd_toggle = 0
+
+Bundle 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_enable_on_vim_startup = 0  " 默认关闭
+let g:indent_guides_guide_size            = 1  " 指定对齐线的尺寸
+let g:indent_guides_start_level 	  = 2  " 从第二层开始可视化显示缩进
+" \ig 打开/关闭 vim-indent-guides
+
+" for show no user whitespaces
+Bundle 'bronson/vim-trailing-whitespace'
+map <leader><space> :FixWhitespace<cr>	" \+space去掉末尾空格
+
+" 快速插入代码片段
+Bundle 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"定义存放代码片段的文件夹 .vim/snippets下，使用自定义和默认的，将会的到全局，有冲突的会提示
+let g:UltiSnipsSnippetDirectories=["snippets", "bundle/ultisnips/UltiSnips"]
+
+Bundle 'scrooloose/nerdcommenter'
+let NERDSpaceDelims = 1
+
+" 使用pyflakes,速度比pylint快
+Bundle 'scrooloose/syntastic'
+let g:syntastic_error_symbol = '✗'	"set error or warning signs
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_highlighting = 0
+"let g:syntastic_python_checker="flake8,pyflakes,pep8,pylint"
+let g:syntastic_python_checkers=['pyflakes']
+"highlight SyntasticErrorSign guifg=white guibg=black
+
+let g:syntastic_cpp_include_dirs = ['/usr/include/']
+let g:syntastic_cpp_remove_include_errors = 1
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -stdlib=libstdc++'
+let g:syntastic_enable_balloons = 1	"whether to show balloons
+
+Bundle 'vim-scripts/TaskList.vim'
+map <leader>td <Plug>TaskList
 
 "进行版权声明的设置
 "添加或更新头
