@@ -38,11 +38,11 @@ Bundle 'FuzzyFinder'
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
 Bundle 'git://github.com/fatih/vim-go.git'
-" Bundle 'Valloric/YouCompleteMe'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'majutsushi/tagbar'
+Bundle 'Valloric/YouCompleteMe'
  
 filetype plugin indent on     " required!
 "
