@@ -70,8 +70,6 @@ set nu
 set mouse=a
 set tabstop=4
 set expandtab
-let mapleader = ","  
-let g:mapleader = ","  
 map Y "+y  
 map P "+p  ""
 
