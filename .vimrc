@@ -1,14 +1,14 @@
 
 set nocompatible               " be iMproved
 filetype off                   " required!
- 
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
- 
+
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
- 
+
 " My Bundles here:
 "
 " original repos on github
@@ -43,7 +43,7 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'majutsushi/tagbar'
 Bundle 'Valloric/YouCompleteMe'
- 
+
 filetype plugin indent on     " required!
 "
 " Brief help  -- 此处后面都是vundle的使用命令
@@ -70,7 +70,7 @@ set nu
 set mouse=a
 set tabstop=4
 set expandtab
-map Y "+y  
+map Y "+y
 map P "+p  ""
 
 "easymotion
@@ -78,15 +78,15 @@ map P "+p  ""
 
 "powerline config
 set laststatus=2
-set t_Co=256   
-set encoding=utf-8  
+set t_Co=256
+set encoding=utf-8
 set fillchars+=stl:\ ,stlnc:\
 
 syntax on
 
 colorscheme delek
 set ruler
-set showcmd	
+set showcmd
 set cmdheight=1
 set hlsearch
 set autoindent
@@ -100,14 +100,14 @@ set incsearch
 set number
 set tw=80
 "filetype on
-set foldenable 
+set foldenable
 "set autochdir
 set foldmethod=syntax
 set foldlevelstart=99
 
 let Tlist_Auto_Open=1
 let Tlist_Exit_OnlyWindow=1
-let Tlist_Use_Right_Window = 1 
+let Tlist_Use_Right_Window = 1
 let Tlist_Show_One_File = 1
 let g:SimpylFold_docstring_preview=1
 
@@ -119,7 +119,7 @@ if has("cscope")
 	if filereadable("cscope.out")
 		cs add cscope.out
 	elseif $CSCOPE_DB != ""
-		cs add $CSCOPE_DB 
+		cs add $CSCOPE_DB
 	endif
 	set cscopeverbose
 	nmap <C-a> :cs f s <C-R>=expand("<cword>")<CR><CR>
