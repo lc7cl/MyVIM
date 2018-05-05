@@ -36,6 +36,12 @@ Bundle 'FuzzyFinder'
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
 Bundle 'git://github.com/fatih/vim-go.git'
+Bundle 'Valloric/YouCompleteMe'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'kien/ctrlp.vim'
  
 filetype plugin indent on     " required!
 "
@@ -58,6 +64,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&  b:NERDTre
 "let g:neocomplcache_force_overwrite_completefunc = 1
 
 "other config
+set clipboard=unnamed
 set nu
 set mouse=a
 set tabstop=4
@@ -102,7 +109,8 @@ set foldlevelstart=99
 let Tlist_Auto_Open=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Right_Window = 1 
-let Tlist_Show_One_File = 1   
+let Tlist_Show_One_File = 1
+let g:SimpylFold_docstring_preview=1
 
 if has("cscope")
 	set cscopetag
@@ -197,16 +205,19 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 au BufNewFile,BufRead *.py
-\ set tabstop=4
-\ set softtabstop=4
-\ set shiftwidth=4
-\ set textwidth=79
-\ set expandtab
-\ set autoindent
+\ set tabstop=4       |
+\ set softtabstop=4   |
+\ set shiftwidth=4    |
+\ set textwidth=79    |
+\ set expandtab       |
+\ set autoindent      |
 \ set fileformat=unix
 
 au BufNewFile,BufRead *.js, *.html, *.css
-\ set tabstop=2
-\ set softtabstop=2
+\ set tabstop=2       |
+\ set softtabstop=2   |
 \ set shiftwidth=2
+
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
 
