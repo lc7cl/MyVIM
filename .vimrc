@@ -32,8 +32,6 @@ set foldenable
 "set autochdir
 set foldmethod=syntax
 set foldlevelstart=99
-set copy to clipboard
-set clipboard=unnamedplus
 
 map Y "+y
 map P "+p  ""
