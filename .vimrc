@@ -104,6 +104,8 @@ set foldenable
 "set autochdir
 set foldmethod=syntax
 set foldlevelstart=99
+set copy to clipboard
+set clipboard=unnamedplus
 
 let Tlist_Auto_Open=1
 let Tlist_Exit_OnlyWindow=1
