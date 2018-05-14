@@ -236,8 +236,6 @@ let g:jedi#usages_command = "<leader>n"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
 
-Plugin 'fatih/vim-go'
-
 Plugin 'Blackrush/vim-gocode'
 #imap <F6> <C-x><C-o>
 
