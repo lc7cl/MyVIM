@@ -35,7 +35,6 @@ Bundle 'FuzzyFinder'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " ...
-Bundle 'git://github.com/fatih/vim-go.git'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'nvie/vim-flake8'
@@ -235,6 +234,3 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<leader>r"
-
-Plugin 'Blackrush/vim-gocode'
-"imap <F6> <C-x><C-o>
