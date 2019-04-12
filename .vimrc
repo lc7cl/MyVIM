@@ -12,6 +12,7 @@ filetype plugin indent on     " required!
 syntax on
 colorscheme delek
 
+set backspace=indent,eol,start
 set ruler
 set showcmd
 set cmdheight=1
