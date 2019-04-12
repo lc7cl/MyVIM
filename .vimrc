@@ -24,7 +24,7 @@ set softtabstop=4
 set shiftwidth=4
 set showmatch
 set expandtab
-set mouse=a
+"set mouse=a
 set incsearch
 set number
 set tw=80
